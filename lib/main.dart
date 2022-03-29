@@ -1,9 +1,7 @@
 import 'package:admin/constants.dart';
-import 'package:admin/controllers/MenuController.dart';
-import 'package:admin/screens/dashboard/dashboard_screen.dart';
+import 'package:admin/features/dashboard/presentations/dashboard_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   runApp(MyApp());
@@ -22,14 +20,7 @@ class MyApp extends StatelessWidget {
             .apply(bodyColor: Colors.white),
         canvasColor: mtSecondaryColor,
       ),
-      home: MultiProvider(
-        providers: [
-          ChangeNotifierProvider<MenuController>(
-            create: (context) => MenuController(),
-          ),
-        ],
-        child: DashboardScreen(),
-      ),
+      home: DashboardScreen(),
     );
   }
 }

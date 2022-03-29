@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
+import 'package:admin/constants.dart';
 
 class StorageInfoCard extends StatelessWidget {
-  const StorageInfoCard({
-    Key key,
+  String? title;
+  String? svgSrc;
+  String? amountOfFiles;
+  int? numOfFiles;
+
+  StorageInfoCard({
+    Key? key,
     @required this.title,
     @required this.svgSrc,
     @required this.amountOfFiles,
     @required this.numOfFiles,
   }) : super(key: key);
-
-  final String title, svgSrc, amountOfFiles;
-  final int numOfFiles;
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +33,7 @@ class StorageInfoCard extends StatelessWidget {
           SizedBox(
             height: 20,
             width: 20,
-            child: SvgPicture.asset(svgSrc),
+            child: SvgPicture.asset(svgSrc!),
           ),
           Expanded(
             child: Padding(
@@ -40,7 +42,7 @@ class StorageInfoCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    title,
+                    title!,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -48,14 +50,14 @@ class StorageInfoCard extends StatelessWidget {
                     "$numOfFiles Files",
                     style: Theme.of(context)
                         .textTheme
-                        .caption
+                        .caption!
                         .copyWith(color: Colors.white70),
                   ),
                 ],
               ),
             ),
           ),
-          Text(amountOfFiles)
+          Text(amountOfFiles!)
         ],
       ),
     );

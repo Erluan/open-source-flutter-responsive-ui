@@ -1,12 +1,12 @@
 import 'package:admin/responsive.dart';
-import 'package:admin/screens/dashboard/widgets/my_files_gridview.dart';
+import 'package:admin/features/dashboard/presentations/widgets/my_files_gridview.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import 'package:admin/constants.dart';
 
 class MyFiles extends StatelessWidget {
-  const MyFiles({
-    Key key,
+  MyFiles({
+    Key? key,
   }) : super(key: key);
 
   @override

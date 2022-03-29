@@ -1,20 +1,22 @@
-import 'package:admin/controllers/MenuController.dart';
 import 'package:admin/responsive.dart';
-import 'package:admin/screens/dashboard/widgets/side_menu.dart';
+import 'package:admin/features/dashboard/presentations/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/src/provider.dart';
+import 'package:admin/constants.dart';
+import 'package:admin/features/dashboard/presentations/widgets/header.dart';
+import 'package:admin/features/dashboard/presentations/widgets/my_files.dart';
+import 'package:admin/features/dashboard/presentations/widgets/recent_files.dart';
+import 'package:admin/features/dashboard/presentations/widgets/storage_details.dart';
 
-import '../../constants.dart';
-import 'package:admin/screens/dashboard/widgets/header.dart';
-import 'package:admin/screens/dashboard/widgets/my_files.dart';
-import 'package:admin/screens/dashboard/widgets/recent_files.dart';
-import 'package:admin/screens/dashboard/widgets/storage_details.dart';
+class DashboardScreen extends StatefulWidget {
+  @override
+  State<DashboardScreen> createState() => _DashboardScreenState();
+}
 
-class DashboardScreen extends StatelessWidget {
+class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: context.read<MenuController>().scaffoldKey,
+      // key: context.read<MenuController>().scaffoldKey,
       drawer: SideMenu(),
       body: SafeArea(
         child: Row(

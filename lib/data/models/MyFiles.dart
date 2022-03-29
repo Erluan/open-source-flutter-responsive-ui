@@ -2,17 +2,21 @@ import 'package:admin/constants.dart';
 import 'package:flutter/material.dart';
 
 class CloudStorageInfo {
-  final String svgSrc, title, totalStorage;
-  final int numOfFiels, percentage;
-  final Color color;
+  String? svgSrc;
+  String? title;
+  String? totalStorage;
+  int? numOfFiels;
+  int? percentage;
+  Color? color;
 
-  CloudStorageInfo(
-      {this.svgSrc,
-      this.title,
-      this.totalStorage,
-      this.numOfFiels,
-      this.percentage,
-      this.color});
+  CloudStorageInfo({
+    this.svgSrc,
+    this.title,
+    this.totalStorage,
+    this.numOfFiels,
+    this.percentage,
+    this.color
+  });
 }
 
 List myFilesMock = [
