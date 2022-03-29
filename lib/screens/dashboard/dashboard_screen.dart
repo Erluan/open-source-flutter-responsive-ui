@@ -1,14 +1,14 @@
 import 'package:admin/controllers/MenuController.dart';
 import 'package:admin/responsive.dart';
-import 'package:admin/screens/dashboard/components/side_menu.dart';
+import 'package:admin/screens/dashboard/widgets/side_menu.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/src/provider.dart';
 
 import '../../constants.dart';
-import 'components/header.dart';
-import 'components/my_files.dart';
-import 'components/recent_files.dart';
-import 'components/storage_details.dart';
+import 'package:admin/screens/dashboard/widgets/header.dart';
+import 'package:admin/screens/dashboard/widgets/my_files.dart';
+import 'package:admin/screens/dashboard/widgets/recent_files.dart';
+import 'package:admin/screens/dashboard/widgets/storage_details.dart';
 
 class DashboardScreen extends StatelessWidget {
   @override

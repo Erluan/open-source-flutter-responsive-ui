@@ -1,9 +1,8 @@
-import 'package:admin/models/MyFiles.dart';
 import 'package:admin/responsive.dart';
+import 'package:admin/screens/dashboard/widgets/my_files_gridview.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import 'file_info_card.dart';
 
 class MyFiles extends StatelessWidget {
   const MyFiles({
@@ -52,28 +51,4 @@ class MyFiles extends StatelessWidget {
   }
 }
 
-class MyFilesGridView extends StatelessWidget {
-  const MyFilesGridView({
-    Key key,
-    this.crossAxisCount = 4,
-    this.childAspectRatio = 1,
-  }) : super(key: key);
 
-  final int crossAxisCount;
-  final double childAspectRatio;
-
-  @override
-  Widget build(BuildContext context) {
-    return GridView.builder(
-      shrinkWrap: true,
-      itemCount: myFilesMock.length,
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: crossAxisCount,
-        mainAxisSpacing: defaultPadding,
-        crossAxisSpacing: defaultPadding,
-        childAspectRatio: childAspectRatio,
-      ),
-      itemBuilder: (context, index) => FileInfoCard(info: myFilesMock[index]),
-    );
-  }
-}
