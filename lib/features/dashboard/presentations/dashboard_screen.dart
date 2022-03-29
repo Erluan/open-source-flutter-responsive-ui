@@ -16,14 +16,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // key: context.read<MenuController>().scaffoldKey,
       drawer: SideMenu(),
       body: SafeArea(
         child: Row(
           children: [
             if (Responsive.isDesktop(context))
               Expanded(
-                // flex: 1, (default)
                 child: SideMenu(),
               ),
             Expanded(

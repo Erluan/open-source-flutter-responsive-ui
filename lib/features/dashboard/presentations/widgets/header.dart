@@ -19,7 +19,6 @@ class _HeaderState extends State<Header> {
 
   @override
   void initState() {
-    // _loginBloc = LoginBloc(BlocProvider.of<AuthenticationBloc>(context));
     _dashboardBloc = DashBoardBloc();
     super.initState();
   }
@@ -42,7 +41,6 @@ class _HeaderState extends State<Header> {
             if (!Responsive.isDesktop(context))
               IconButton(
                 onPressed: () {
-                  // Scaffold.of(context).openDrawer();
                   _dashboardBloc!.add(DashBoardOpenSideMenu());
                 },
                 icon: Icon(Icons.menu),
